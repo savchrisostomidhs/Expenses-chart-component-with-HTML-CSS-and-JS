@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: hsla(10, 79%, 65%, 0.2);
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+}
+
+/* Balance */
+
+.balance {
+    align-items: center;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 20px;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    height: 125px;
+    justify-content: space-between;
+    padding: 30px 38px 30px 32px;
+    width: 540px;
+}
+
+.balance .balance-text>p:nth-child(1) {
+    opacity: 0.8;
+}
+
+.balance .balance-text>p:nth-child(2) {
+    font-size: 1.84em;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* Spending */
+
+.spending {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 510px;
+    padding: 32px 40px;
+    width: 540px;
+}
+
+/* Header */
+
+.spending h1 {
+    font-size: 1.84em;
+}
+
+/* Diagrams */
+
+.spending .days {
+    border-bottom: 1px solid hsla(28, 10%, 53%, 0.6);
+    display: flex;
+    height: fit-content;
+    justify-content: flex-start;
+    justify-content: space-between;
+    min-height: 275px;
+    padding: 35px 0 35px;
+}
+
+.spending .days .day {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    width: 48px;
+}
+
+.spending .days .day .diagram {
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.spending .days .day .amount {
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 8px;
+    padding: 8px 6px;
+    visibility: hidden;
+}
+
+.spending .days .day p {
+    color: hsl(28, 10%, 53%);
+    font-size: 0.89em;
+}
+
+/* Total */
+
+.spending .total {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.spending .total .this-month {
+    margin-top: 22px;
+}
+
+.spending .total .this-month p:nth-child(1),
+.spending .total .last-month p:nth-child(2) {
+    color: hsl(28, 10%, 53%);
+}
+
+.spending .total .this-month p:nth-child(2) {
+    font-size: 2.78em;
+    font-weight: bold;
+}
+
+.spending .total .last-month {
+    display: flex;
+    flex-direction: column;
+    margin-top: 46px;
+}
+
+.spending .total .last-month p:nth-child(1) {
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-height: 800px) {
+    body {
+        font-size: 12px;
+    }
+
+    .balance {
+        height: 75px;
+    }
+
+    .spending {
+        height: fit-content;
+    }
+
+    .balance,
+    .spending {
+        width: 440px;
+    }
+
+    .spending .days .day {
+        width: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .balance {
+        width: 100%;
+    }
+
+    .spending {
+        width: 100%;
+    }
+
+    .spending .days {
+        gap: 5px;
+    }
+
+    .spending .days .day {
+        width: 14%;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+
+    .spending .days .day {
+        width: 10%;
+    }
+
+    .spending .total .this-month p:nth-child(2) {
+        font-size: 2em;
+    }
+}
